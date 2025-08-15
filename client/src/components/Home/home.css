@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import 'tailwindcss';
+
+/* font */
+@theme {
+    --font-cinzel: 'Cinzel', serif;
+    --text-xs-custom: 12px; /* custom font size */
+    --text-xl-custom: 15px;
+}
+
+/* how to use it */
+@layer components {
+    .font {
+        @apply font-cinzel font-medium uppercase ;
+        /* font-weight: 400; */ 
+    }
+
+    .fontBig {
+        @apply lg:text-6xl text-4xl
+    }
+    
+    .fontGradient{
+        @apply bg-gradient-to-l from-black via-blue-950 to-blue-950 text-transparent bg-clip-text;
+    }
+
+    .border {
+        @apply border-b-2 border-gray-300;
+    }
+    
+    .line {
+        @apply w-full h-0 border-l-[50px] border-l-transparent border-r-[50px] border-r-transparent
+    }
+}

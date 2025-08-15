@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import "@fontsource/source-sans-pro"; /* If using Source Sans Pro instead of Roboto */
+
+@theme {
+  --font-source: "Source Sans Pro", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --text-xs-custom: 12px; /* custom font size */
+  --text-xl-custom: 14px;
+}
+
+
+@layer components {
+    .footer {
+        @apply bg-black py-7 px-2 lg:px-32  w-full bottom-0 flex-col items-center 
+        font-source text-xs-custom  ;
+    }
+
+    .footer hr {
+        @apply border-l-stone-200 w-full py-2
+    }
+
+    .icon {
+        @apply w-5 h-5 text-white hover:text-gray-300 ;
+    }
+
+    .detailsIcon {
+        @apply text-yellow-200 ;
+    }
+
+    .contactInformation, .todaySchedule , .footer{
+        @apply text-gray-300; 
+    }
+
+    .stateInformation, .officeHours {
+        @apply text-white lg:text-xl;
+    }
+
+    .officeHours {
+        @apply text-xl-custom lg:text-lg py-2;
+    }
+
+    .todaySchedule {
+        @apply space-x-2 text-xl-custom
+    }
+
+    .icons {
+        @apply flex flex-row space-x-4 py-2;
+    }
+
+    .footer .details {
+        @apply  text-yellow-300 text-xl lg:text-2xl font-black ;
+    } 
+    
+    .footer .contacts > p{
+        @apply text-white text-sm flex py-2 space-x-2 items-center
+    }
+
+    
+
+}
+
