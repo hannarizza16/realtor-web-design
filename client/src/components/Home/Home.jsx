@@ -7,7 +7,7 @@ export const Home = () => {
     return ( 
         <>
         <div className="relative h-screen">
-            <div className=" absolute inset-0 bg-[url(../public/img/background.jpg)]  bg-cover bg-center  blur-xs"></div>
+            <div className=" absolute inset-0 bg-[url(/background.jpg)]  bg-cover bg-center  blur-xs"></div>
 
             <div className="h-full relative flex flex-col  lg:justify-between lg:px-36 lg:flex-row">
 
