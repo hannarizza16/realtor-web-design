@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+
+
 /* #root {
   max-width: 1280px;
   margin: 0 ;
@@ -7,6 +9,9 @@
   text-align: center;
 } */
 
+.galleryBg {
+  @apply bg-[rgba(39,41,80)] backdrop-blur-lg ;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

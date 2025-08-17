@@ -1,6 +1,6 @@
 import { useState } from "react";
 import pictures from "./gallery.Data.jsx";
-import './gallery.css';
+import '../../App.css';
 import '../Home/home.css';
 
 export const Gallery = () => {
@@ -25,18 +25,19 @@ export const Gallery = () => {
   return (
     <>
    
-    <div className="px-2 lg:px-36 lg:h-auto h-screen py-2">  {/* h-screen or h-auto */}
+    <div className="px-2 lg:px-36 lg:h-auto h-screen py-8 ">  {/* h-screen or h-auto galleryBg*/}
       <h1 className="text-black font text-xs-custom lg:text-2xl py-5">Gallery</h1>
 
       {/* Image Grid */}
       <div className="grid h-auto grid-cols-3 gap-5 lg:grid-cols-5">
         {pictures.map(({ id, image, label }, index) => (
-          <div key={id} className="relative group cursor-pointer">
+          <div key={id} className="relative group cursor-pointer ">
             <img
               src={image}
               alt={label}
               onClick={() => openImage(index)}
-              className="object-cover w-full h-auto bg-gray-200 rounded aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]"
+              className="object-cover w-full h-auto rounded-2xl aspect-[5/6] lg:aspect-[2/3] xl:aspect-[3/4]
+              shadow-md  hover:shadow-[0_8px_30px_rgba(0,0,0,1)] hover:scale-105 transition duration-300"
             />
 
             {/* Hover Label */}
