@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FaX } from "react-icons/fa6";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import pictures from "./gallery.Data.jsx";
 import '../../App.css';
 import '../Home/home.css';
@@ -52,9 +54,16 @@ export const Gallery = () => {
       {/* Modal Lightbox */}
       {activeIndex !== null && (
         <div
-          onClick={closeImage}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 cursor-zoom-out"
         >
+          {/* close image */}
+          <button
+          onClick={closeImage}
+          className="absolute top-2 right-2  text-black rounded-full px-2 py-1 text-sm hover:text-gray-300 cursor-pointer"
+        >
+          <FaX />
+        </button>
+
           <div
             className="relative flex items-center justify-center w-11/12 xl:w-4/5 h-11/12"
             onClick={(e) => e.stopPropagation()}
@@ -62,24 +71,24 @@ export const Gallery = () => {
             {/* Prev Button */}
             <button
               onClick={prevImage}
-              className="absolute left-4 flex items-center justify-center text-white bg-white/20 rounded-full p-3 hover:bg-white/40"
+              className="absolute left-4 flex items-center justify-center lg:text-white text-black bg-white/20 rounded-full p-3 hover:bg-white/40"
             >
-              ‹
+              <MdKeyboardArrowLeft size={30}/>
             </button>
 
-            {/* Active Image */}
+            {/* Active Image preview image*/}
             <img
               src={pictures[activeIndex].image}
               alt={pictures[activeIndex].label}
-              className="object-contain w-full h-full"
+              className="object-contain w-full h-full rounded-2xl"
             />
 
             {/* Next Button */}
             <button
               onClick={nextImage}
-              className="absolute right-4 flex items-center justify-center text-white bg-white/20 rounded-full p-3 hover:bg-white/40"
+              className="absolute right-4 flex items-center justify-center lg:text-white text-black bg-white/20 rounded-full p-3 hover:bg-white/40"
             >
-              ›
+              <MdKeyboardArrowRight size={30}/>
             </button>
           </div>
         </div>
