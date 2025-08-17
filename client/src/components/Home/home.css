@@ -64,7 +64,26 @@
   animation: textShine 5s ease-in-out infinite alternate;
 }
 
-.image-shine {
+/* Keyframes for the shine movement */
+@keyframes infiniteShine {
+  0% { /* Start off-screen to the left */
+    left: -60%;
+    opacity: 0;
+  }
+  10% { /* Move to the right and become visible */
+    left: 100%;
+    opacity: 1;
+  }
+  11% {
+    opacity: 1;
+  }
+  100% {
+    /* left: 200%; Move off-screen to the right */
+    opacity: 0;
+  }
+}
+
+.image-shine, .image-shine-infinite {
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -72,7 +91,7 @@
   border-bottom-right-radius: 9999px;
 }
 
-.image-shine img {
+.image-shine img, .image-shine-infinite img{
   display: block;
   width: 100%;
   height: auto;
@@ -96,6 +115,29 @@
   );
 }
 
+.image-shine-infinite:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+  /* for infinite shine without needing to hover the image */
+  transform: rotate(30deg);
+  animation: infiniteShine 10s infinite; /* 👈 runs forever */
+  opacity: 0;
+}
+
+/* image shines when hover */
 .image-shine:hover:after {
   opacity: 1;
   left: 130%;

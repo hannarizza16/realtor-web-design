@@ -9,20 +9,20 @@ export const Home = () => {
         <div className="relative h-screen">
             <div className="absolute inset-0 bg-[url(/background.jpg)]  bg-cover bg-center  blur-xs"></div>
 
-            <div className="h-full relative flex flex-col  lg:justify-between lg:px-36 lg:flex-row">
+            <div className="h-full relative flex flex-col lg:justify-between lg:px-36 lg:flex-row">
 
                 {/* left side - small screen */}
-                <div className='lg:hidden  flex flex-col items-center py-5'>
+                <div className='lg:hidden flex flex-col items-center py-5'>
                     <span className='font text-xl-custom lg:text-2xl lg:text-black '> Marci Metzger - The Ridge Realty Group</span>
 
                     <hr className='line' />
                     <span className="font fontBig fontGradient pt-4">Pahrump Realtor</span>
                 </div>
 
-                {/* left side - image */}
+                {/* left side - image  /image effect image-shine and image-shine-infinite*/}
                 <div className='flex flex-col justify-center items-center lg:justify-start'>
-                    <div className='image-shine w-60 h-60 lg:w-90 lg:h-90'>
-                        <img src="/Img/M.png" alt="" className="" />
+                    <div className='image-shine-infinite w-60 h-60 lg:w-90 lg:h-90'> 
+                        <img src="/Img/M.png" alt="Marci Metzger Image"  />
                     </div>
 
                     {/* Social media icons */}
