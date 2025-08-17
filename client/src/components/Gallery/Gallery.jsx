@@ -53,7 +53,7 @@ export const Gallery = () => {
       {activeIndex !== null && (
         <div
           onClick={closeImage}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70 cursor-zoom-out"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 cursor-zoom-out"
         >
           <div
             className="relative flex items-center justify-center w-11/12 xl:w-4/5 h-11/12"
