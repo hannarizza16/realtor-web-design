@@ -28,7 +28,7 @@ export const Gallery = () => {
     <>
    
     <div className="px-2 lg:px-36 lg:h-auto h-screen py-8 ">  {/* h-screen or h-auto galleryBg*/}
-      <h1 className="text-black font text-xs-custom lg:text-2xl py-5">Gallery</h1>
+      <h1 className="text-black font text-xs-custom lg:text-2xl py-5">Property Gallery</h1>
 
       {/* Image Grid */}
       <div className="grid h-auto grid-cols-3 gap-5 lg:grid-cols-5">
