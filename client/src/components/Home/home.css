@@ -16,7 +16,7 @@
     }
 
     .fontBig {
-        @apply lg:text-6xl text-4xl
+        @apply lg:text-6xl text-4xl text-white
     }
     
     .fontSmall {
