@@ -15,6 +15,6 @@
   overflow: hidden; /* Prevents overflow */
   width: max-content; /* makes it infinite*/
 }
- 
+
 
 /* Remove the ::after pseudo-element - it's not needed */

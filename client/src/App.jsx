@@ -3,6 +3,7 @@ import { Footer } from './components/Footer/Footer.jsx'
 import { Home } from './components/Home/Home.jsx'
 import { Gallery } from './components/Gallery/Gallery.jsx'
 import { Logo } from './components/Logo/Logo.jsx'
+import { Advertise } from './components/Advertise/Advertise.jsx'
 import './App.css'
 
 function App() {
@@ -14,6 +15,11 @@ function App() {
       {/* About Section */}
       <section id="home" className="">
         <Home/>
+      </section>
+
+      <section id="advertise">
+        <Advertise/>
+
       </section>
 
       <section id="gallery">
