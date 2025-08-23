@@ -14,19 +14,24 @@ export const Advertise = () => {
             <span className=" flex justify-center text-black font text-[32px] lg:fontMedium">Your key to the perfect home</span>
         </div>
 
-        <div className="flex flex-col lg:flex-row flex-6 justify-between py-5 ">
-            <div className="flex flex-col w-full lg:w-1/2 justify-start items-start">
-                {/* <h1 className="text-black">left</h1> */}
-                {advertise.map(({id, heading, context}) => (
-                    <div key={id} className="text-black py-5 px-8 ">
-                        <span className="flex py-5 text-3xl">{heading}</span>
-                        <span className="text-xl">{context}</span>
-
-                    </div>
-                ))}
+        <div className="flex flex-col lg:flex-row flex-6 justify-between py-5">             
+            <div className="flex flex-col w-full lg:w-1/2 justify-start items-start">                 
+                {advertise.map(({id, heading, context}, index) => (                     
+                    <div 
+                        key={id} 
+                        className="text-black py-5 px-8 opacity-0 animate-fade-in"
+                        style={{
+                            animationDelay: `${index * 0.2}s`,
+                            animationFillMode: 'forwards'
+                        }}
+                    >                         
+                        <span className="flex py-5 text-3xl">{heading}</span>                         
+                        <span className="text-xl">{context}</span>                      
+                    </div>                 
+                ))}             
             </div>
 
-            <div className="flex lg:w-1/2 justify-center items-center overflow-hidden py-5 lg:py-0">
+            <div className="flex lg:w-1/2 h-auto justify-center items-center py-5 lg:py-0">
                 {/* <video className="rounded-lg shadow-2xl" autoPlay muted loop playsInline>
                     <source
                         src="/videos/houseDemo.mp4"
@@ -35,21 +40,15 @@ export const Advertise = () => {
                     Your browser does not support the video tag.
                 </video> */}
                 <iframe src="https://player.vimeo.com/video/1112554069?autoplay=1&muted=1&loop=1&background=1&dnt=1&playsinline=1"
-                    className="w-full h-full"
+                    className="lg:w-full lg:h-full w-2xl h-96" 
+                    // width="1920" height="1080"
                     allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
                     referrerPolicy="strict-origin-when-cross-origin" 
                     title="houseDemo">
                 </iframe>
 
-
-                
             </div>
-            
-
         </div>
-        
-
-        
         
         </div>
     )
