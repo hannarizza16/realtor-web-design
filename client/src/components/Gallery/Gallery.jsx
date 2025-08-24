@@ -31,7 +31,7 @@ export const Gallery = () => {
   return (
     <>
       <div className="side-padding h-auto py-15">
-        <span className="text-black font text-2xl lg:text-4xl ">
+        <span className="text-black font text-[32px] lg:text-4xl ">
           Property Gallery
         </span>
 
